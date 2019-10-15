@@ -1,0 +1,24 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/
+spring:
+  application:
+    name: feign-test
+server:
+  port: ${PORT:0}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    com:
+      example:
+        feignandrest:
+         UserFeignClient: DEBUG
+feign:
+  hystrix:
+    enabled: true
+

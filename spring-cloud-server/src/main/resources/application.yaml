@@ -1,0 +1,22 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/erayerdem/spring-cloud-config-server
+          username: erayerdem
+          password: sameteray.2
+          clone-on-start: true
+server:
+  port: 8020
